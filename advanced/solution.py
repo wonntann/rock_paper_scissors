@@ -13,24 +13,30 @@ while player == False:
 #set player to True
     player = input("Select: Rock, Paper, Scissors?").capitalize()
     if player == computer:
-        print("Tie!")
+        print(f"Computer selects {computer}, you selected {player}\nIt's a tie") 
+
     elif player == "Rock":
         if computer == "Paper":
-            print("You lose!", computer, "covers", player)
+            print(f"Computer selects {computer}, you selected {player}\nThe computer wins!")
         else:
-            print("You win!", player, "smashes", computer)
+            print(f"Computer selects {computer}, you selected {player}\nYou win!")
+
     elif player == "Paper":
         if computer == "Scissors":
-            print("You lose!", computer, "cut", player)
+            print(f"Computer selects {computer}, you selected {player}\nThe computer wins!")
         else:
-            print("You win!", player, "covers", computer)
+            print(f"Computer selects {computer}, you selected {player}\nYou win!")
+            
     elif player == "Scissors":
         if computer == "Rock":
-            print("You lose...", computer, "smashes", player)
+            print(f"Computer selects {computer}, you selected {player}\nThe computer wins!")
         else:
-            print("You win!", player, "cut", computer)
+            print(f"Computer selects {computer}, you selected {player}\nThe computer wins!")
+            
     else:
         print("That's not a valid play. Check your spelling!")
+
+    
     #player was set to True, but we want it to be False so the loop continues
     player = False
     computer = t[randint(0,2)]

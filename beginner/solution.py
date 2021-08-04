@@ -1,62 +1,57 @@
-# Python Random Module
+# import random module
 import random
 
-# Intro
+# intro
 print("Rock, Paper, Scissors...")
 
-# Function
+# main function
 def main():
   # Random Choice (Rock, Paper, or Scissors)
     rps = ["Rock", "Paper", "Scissors"]
     computer = random.choice(rps)
 
-  # Player's choice
-    player = input("your choice: ").lower().capitalize()
+  # player's choice
+    player = input("your choice: ").capitalize()
 
-  # If the program chose rock
-    if computer == "Rock":
-    	# If the player chose rock
-        if player == "Rock":
-            print(f"I chose {computer}, you chose {player}\nit's a tie!")
-        # If the player chose paper
-        elif player == "Paper":
-            print(f"I chose {computer}, you chose {player}\nYou win!")
-        # If the player chose scissors
-        elif player == "Scissors":
-            print(f"I chose {computer}, you chose {player}\nI win!")
+  # tie
+    if player == computer:
+        print("Tie!")
 
-  # If the program chose paper
-    elif computer == "Paper":
-    	# If the player chose rock
-        if player == "Rock":
-            print(f"I chose {computer}, you chose {player}\nI win!")
-        # If the player chose paper
-        elif player == "Paper":
-            print(f"I chose {computer}, you chose {player}\nIt's a tie!")
-        # If the player chose scissors
-        elif player == "Scissors":
-            print(f"I chose {computer}, you chose {player}\nYou win!")
+  # if the player selects rock
+    elif player == "Rock":
+    	# if the computer selects paper
+        if computer =="Paper":
+            print("You lose!", computer, "covers", player)
+        # if the computer selects scissors
+        else:
+            print("You win!", player, "smashes", computer)
+            
 
-  # If the program chose scissors
-    elif computer == "Scissors":
-    	# If the player chose rock
-        if player == "Rock":
-            print(f"I chose {computer}, you chose {player}\nYou win!")
-        # If the player chose paper
-        elif player == "Paper":
-            print(f"I chose {computer}, you chose {player}\nI win!")
-        # If the player chose scissors
-        elif player == "Scissors":
-            print(f"I chose {computer}, you chose {player}\nIt's a tie") 
+  # if the player selects paper
+    elif player == "Paper":
+    	# if the computer selects rock
+        if computer =="Rock":
+            print("You win!", player, "covers", computer)
+        # if the computer selects scissors
+        else:
+            print("You lose!", computer, "cuts", player)
 
-  # If the player wants to play again
+  # if the player selects scissors
+    elif player == "Scissors":
+    	# if the computer selects rock
+        if computer =="Rock":
+            print("You lose...", computer, "smashes", player)
+        # if the computer selects paper
+        else:
+            print("You win!", player, "cuts", computer)
+  # if the computer wants to play again
     play_again = input("Do you want to play again? yes or no: ").lower().capitalize()
-    # If the player says yes, go back to the function
+    # if the computer says yes, go back to the function
     if play_again == "Yes":
         main()
-    # If the player says no, say goodbye
+    # if the computer says no, say goodbye
     elif play_again == "No":
         print("Goodbye")
 
-# End of function
+# end of function
 main()
