@@ -3,14 +3,16 @@ from random import randint
 #create a list of play options
 rps = ["Rock", "Paper", "Scissors"]
 
-#assign a random play to the computer
-computer = rps[randint(0,2)]
 
-#set player to False
-player = False
+
+
 
 # main function
 def myGame():
+    #assign a random play to the computer
+    computer = rps[randint(0,2)]
+    #set player to False
+    player = False
     while player == False:
     #set player to True
         player = input("Select: Rock, Paper, Scissors?").capitalize()
