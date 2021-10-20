@@ -3,10 +3,6 @@ from random import randint
 #create a list of play options
 rps = ["Rock", "Paper", "Scissors"]
 
-
-
-
-
 # main function
 def myGame():
     #assign a random play to the computer
